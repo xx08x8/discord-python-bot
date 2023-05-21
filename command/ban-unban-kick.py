@@ -47,3 +47,4 @@ async def unban(inter, *, member):
             await inter.guild.unban(user)
             await inter.send(embed=emb)
         return
+bot.run("YOUR_TOKEN")
