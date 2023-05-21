@@ -20,7 +20,6 @@ async def kick(inter, user: disnake.Member, *, reason = None):
 
 # ban user
 @bot.slash_command(description="Ban user: /ban [@user] [reason]")
-@commands.has_permissions(ban_members=True)
 async def ban(inter, user: disnake.Member, *, reason=None):
     if not reason:
         emb = disnake.Embed(title="", color=inter.author.color)
@@ -35,7 +34,6 @@ async def ban(inter, user: disnake.Member, *, reason=None):
 
 # unban user
 @bot.slash_command(description="Unban user: /unban [@user]")
-@commands.has_permissions(ban_members=True)
 async def unban(inter, *, member):
     banned_users = inter.guild.bans()
     member_name, member_discriminator = member.split('#')
