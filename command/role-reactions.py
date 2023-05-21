@@ -2,6 +2,7 @@ from disnake.ext import commands
 
 intents = disnake.Intents.default()
 intents.members = True
+intents.reactions = True
 bot = commands.Bot(command_prefix="!", intents=intents)
 
 ROLE_MESSAGE_ID = 1234567890  # message ID
